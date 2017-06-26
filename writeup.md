@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 ####1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
-* model.ipynb containing the script to create and train the model
+* model2.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model2.h5 containing a trained convolution neural network 
 * writeup_report.md or writeup_report.pdf summarizing the results
@@ -38,15 +38,15 @@ python drive.py model2.h5
 
 ####3. Submission code is usable and readable
 
-The model.ipynb file contains the code for training and saving the convolution neural network`model2.h5`. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The model2.py file contains the code for training and saving the convolution neural network`model2.h5`. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 ###Model Architecture and Training Strategy
 
 ####1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 and 5x5 filter sizes and 5 convolution layer (Convolution neural network block of `model.ipynb`) 
+My model consists of a convolution neural network with 3x3 and 5x5 filter sizes and 5 convolution layer (Convolution neural network part of `model2.py`) 
 
-The model includes RELU layers `activation="relu"` to introduce nonlinearity (Convolution neural network block of `model.ipynb``model.ipynb`), and the data is normalized in the model using a Keras lambda layer(`model.add(Lambda(lambda x: (x/127.5) - 1., input_shape=(160,320,3)))`) (Convolution neural network block of `model.ipynb` ). 
+The model includes RELU layers `activation="relu"` to introduce nonlinearity (Convolution neural network part of `model2.py`), and the data is normalized in the model using a Keras lambda layer(`model.add(Lambda(lambda x: (x/127.5) - 1., input_shape=(160,320,3)))`) (Convolution neural network block of `model2.py` ). 
 
 ####2. Attempts to reduce overfitting in the model
 
@@ -63,7 +63,7 @@ Because of previously experiments, I add the dropout unit to reduce the overfitt
 
 ####3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually, `model.compile(loss='mse', optimizer='adam')` (Convolution neural network block of `model.ipynb`).
+The model used an adam optimizer, so the learning rate was not tuned manually, `model.compile(loss='mse', optimizer='adam')` (Convolution neural network block of `model2.py`).
 
 ####4. Appropriate training data
 
@@ -89,7 +89,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 ####2. Final Model Architecture
 
-The final model architecture ( Convolution neural network block of  `model.ipynb`) consisted of a convolution neural network with the following layers and layer sizes.
+The final model architecture ( Convolution neural network part of  `model2.py`) consisted of a convolution neural network with the following layers and layer sizes.
 
 I used NVIDIA architecture which has been introduced in Udacity's lesson, this architecture more powerful than Lynette. and the image I shown below is the screenshot of Udacity's lesson's video. The network consists of a normalization layer (`model.add(Lambda(lambda x: (x/127.5) - 1., input_shape=(160,320,3)))`), five convolutional layer (Kernel size 5 by 5 and 3 by 3). The architecture image, starting from the bottom (input),
 
