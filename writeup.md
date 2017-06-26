@@ -57,7 +57,7 @@ I try to decrease epoch times to 2 to reduce overfitting, the loss value perform
 ![epoch = 2, without dropout](Image/epoch2_without_dropout.png)
 ![Image of fell off the track](Image/model2_1.png)
 
-Because of previously experiments, I add the dropout unit to reduce the overfitting. The loss value of the trainin gand validation shows dropout unit reduce the overfitting, and testing in autonomous mode also shows the model can run and the vehicle can stay on the track. Also, the dropout unit reduce process time of training step. The loss value of the training and validation graphy shown below.
+Because of previously experiments, I add the dropout unit to reduce the overfitting. The loss value of the trainin gand validation shows dropout unit reduce the overfitting, but the testin result didn't shows well, result of using `epoch = 3, without dropout` are more better then `[epoch = 3, with dropout` . The loss value of the training and validation graphy shown below.
 ![epoch = 3, with dropout](Image/epoch3_with_dropout.png)
 
 
